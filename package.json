@@ -2,8 +2,8 @@
   "name": "financeGraphQLService",
   "version": "1.0.0",
   "description": "ts-package-tempate Description",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./lib/server.js",
+  "types": "./lib/server.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json",
@@ -39,5 +39,12 @@
   "files": [
     "lib/**/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "alpha_vantage_api_wrapper": "git+https://git@github.com/schardtbc/alpha_vantage_api_wrapper.git",
+    "apollo-server": "2.3.1",
+    "fmp-api-wrapper": "git+https://git@github.com/schardtbc/fmp-api-wrapper.git",
+    "graphql": "14.0.2",
+    "iex-api-wrapper": "git+https://git@github.com/schardtbc/iex-api-wrapper.git",
+    "yahoo_finance_api_wrapper": "git+https://git@github.com/schardtbc/yahoo_finance_api_wrapper.git"
+  }
 }
