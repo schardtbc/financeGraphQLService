@@ -1,11 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2016",
     "module": "commonjs",
+    "lib": ["es2016", "esnext.asynciterable"],
     "declaration": true,
     "outDir": "./lib",
-    "strict": true
+    "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*", "lib"]
+  "include": [
+      "src",
+      ],
+  "exclude": ["node_modules", "**/__tests__/*", "lib"],
+
 }

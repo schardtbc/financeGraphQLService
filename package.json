@@ -13,7 +13,8 @@
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "start": "node ./lib/server.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/schardtbc/financeGraphQLService#readme",
   "devDependencies": {
+    "@types/graphql": "14.0.4",
     "@types/jest": "23.3.11",
     "jest": "23.6.0",
     "nyc": "13.1.0",
@@ -40,11 +42,14 @@
     "lib/**/*"
   ],
   "dependencies": {
+    "@types/reflect-metadata": "0.1.0",
     "alpha_vantage_api_wrapper": "git+https://git@github.com/schardtbc/alpha_vantage_api_wrapper.git",
     "apollo-server": "2.3.1",
     "fmp-api-wrapper": "git+https://git@github.com/schardtbc/fmp-api-wrapper.git",
     "graphql": "14.0.2",
     "iex-api-wrapper": "git+https://git@github.com/schardtbc/iex-api-wrapper.git",
+    "reflect-metadata": "0.1.12",
+    "type-graphql": "0.16.0",
     "yahoo_finance_api_wrapper": "git+https://git@github.com/schardtbc/yahoo_finance_api_wrapper.git"
   }
 }

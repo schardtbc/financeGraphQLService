@@ -1,12 +1,26 @@
+import "reflect-metadata"
+
 import { ApolloServer } from "apollo-server";
 
-import { resolvers } from "./resolvers"
-import { schema } from "./schema"
+import * as path from "path";
 
-const server = new ApolloServer({ schema, resolvers });
+import { buildSchema } from "type-graphql";
 
-// This `listen` method launches a web-server.  Existing apps
-// can utilize middleware options, which we'll discuss later.
-server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
-});
+
+const PORT = process.env.PORT || 5437;
+
+export async function bootstrap() {
+    const schema = await buildSchema({
+        emitSchemaFile: path.resolve(__dirname, "schema.gql"),
+        resolvers: [__dirname + "/**/*.resolvers.js"],
+    });
+    const server = new ApolloServer({
+        playground: true,
+        schema
+    });
+
+    const { url } = await server.listen(PORT);
+    console.log(`Server is running, GrapQL playground is availiable at "${url}`)
+}
+
+bootstrap();
