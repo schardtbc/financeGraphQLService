@@ -12,7 +12,6 @@ export class IEXQuoteResolver {
     @Query(returns => IEXQuote)
     public async iexQuote(@Arg("symbol") symbol: string) {
         const res = await this.iexQuoteService.forSymbol(symbol);
-        console.log(res);
         return res;
     }
 }
