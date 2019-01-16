@@ -11,4 +11,5 @@ export class OptionsResolver {
     const res = this.optionService.fromObjArray(objArray);
     return res;
   }
+
 }

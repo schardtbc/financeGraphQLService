@@ -8,10 +8,12 @@ import { Options } from "./Options.type"
 export class OptionChain {
   @Field()
   public underlyingSymbol: string = "";
-  @Field(type => [GraphQLTimestamp])
+  @Field(type => [Int])
   public expirationDates: number[] =[];
   @Field(type => [Number])
   public strikes: number[] = [];
+  @Field(type => [String])
+  public symbols: string[] = [];
   @Field()
   public hasMiniOptions: boolean = false;
   @Field(type => Quote)

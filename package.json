@@ -48,6 +48,7 @@
     "fmp-api-wrapper": "git+https://git@github.com/schardtbc/fmp-api-wrapper.git",
     "graphql": "14.0.2",
     "iex-api-wrapper": "git+https://git@github.com/schardtbc/iex-api-wrapper.git",
+    "moment": "2.23.0",
     "reflect-metadata": "0.1.12",
     "type-graphql": "0.16.0",
     "yahoo_finance_api_wrapper": "git+https://git@github.com/schardtbc/yahoo_finance_api_wrapper.git"
